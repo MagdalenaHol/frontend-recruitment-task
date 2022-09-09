@@ -3,28 +3,58 @@ $primary-color: black;
 $padding: 40px 15%;
 $font: 15px;
 
+
+.modal-bg {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background-color: white;
+  padding: 20px 3rem;
+  margin: auto;
+  width: 80%;
+  height: 30%;
+}
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal-close {
+  cursor: pointer;
+}
+
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-	color: rgb(45, 46, 48);
-	padding: 2rem 5rem;
-    font-size: $font;
-    font-family: "Montserrat", sans-serif;
+  color: rgb(45, 46, 48);
+  padding: 2rem 5rem;
+  font-size: $font;
+  font-family: "Montserrat", sans-serif;
 }
 
 p {
-	color: rgba(45, 46, 48, .75);
-	line-height: 1.3;
-	margin-bottom: 0;
+  color: rgba(45, 46, 48, 0.75);
+  line-height: 1.3;
+  margin-bottom: 0;
 }
 
 .container {
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
-  gap:34px;
+  gap: 34px;
   max-width: 1440px;
 }
 
@@ -52,8 +82,9 @@ img {
   border-style: none;
   border-radius: 32px;
   width: 128px;
-  margin:20px auto;
+  margin: 20px auto;
   padding: 16px 40px;
+  cursor: pointer;
 }
 
 //Responsive//
@@ -73,7 +104,7 @@ img {
     align-items: center;
   }
   .container {
-    display:inline-block;
+    display: inline-block;
   }
   .container img {
     float: left;

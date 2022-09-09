@@ -17,10 +17,21 @@
                 <h1>Lorem Ipsum</h1>
                 <p>Infinitely scalable, feature-rich and cloud-native data management and protection for modern and
                 legacy infrastructures and SaaS platforms, managed via a single app with no hardware required.</p>
-                <button data-modal="counter1" class="btn">Button</button>
+                <button class="btn" id="btn-pop-up">Button</button>
             </div>
         </div>
     </section>
+    <div class="modal-bg" id="modal-pop-up">
+        <div class='modal'>
+            <div class="modal-header">
+                <h1>Alert!</h1>
+                <span class="modal-close" id="modal-pop-up-close">X</span>
+            </div>
+            <div class="modal-content">
+                <p>You have clicked <strong>X times</strong> to related button</p>
+            </div>
+        </div>
+    </div>
 
     <script src="./dist/all.js"></script>
 </body>
