@@ -1,7 +1,19 @@
-const modalButton = document.querySelector(".btn");
-const modalBg = document.querySelector(".modal-bg");
 
+const activeModal = () => {
+  document.querySelector(".modal")
+    .classList.toggle("modal--hidden");
+  document.querySelector(".overlay")
+    .classList.toggle("overlay--hidden");
+};
 
-modalButton.addEventListener("click", function () {
-  modalBg.classList.add("bg-active");
-});
+document.querySelector("#btn-pop-up")
+    .addEventListener("click", activeModal);
+
+document.querySelector(".overlay")
+    .addEventListener("click", activeModal);
+
+document.querySelector(".modal__close")
+    .addEventListener("click", activeModal);
+
+document.querySelector(".overlay")
+    .addEventListener("click", activeModal);

@@ -3,44 +3,6 @@ $primary-color: black;
 $padding: 40px 15%;
 $font: 15px;
 
-
-.modal-bg {
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.6);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  visibility:hidden;
-  opacity:0;
-  transition:visibility 0s opacity 0.5s;
-}
-
-.bg-active {
-    visibility:visible;
-    opacity:1;
-}
-
-.modal {
-  background-color: white;
-  padding: 20px 3rem;
-  margin: auto;
-  width: 80%;
-  height: 30%;
-}
-.modal-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.modal-close {
-  cursor: pointer;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -56,6 +18,11 @@ p {
   color: rgba(45, 46, 48, 0.75);
   line-height: 1.3;
   margin-bottom: 0;
+}
+
+img {
+  max-width: 100%;
+  margin-bottom: 20px;
 }
 
 .container {
@@ -79,11 +46,6 @@ p {
   max-width: 100%;
 }
 
-img {
-  max-width: 100%;
-  margin-bottom: 20px;
-}
-
 .btn {
   background: #c8a597;
   color: #eeecec;
@@ -93,6 +55,46 @@ img {
   margin: 20px auto;
   padding: 16px 40px;
   cursor: pointer;
+}
+
+.modal {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: visibility 0s, opacity 0.4s;
+  &--hidden {
+    display: none;
+  }
+  &__box {
+    background-color: white;
+    padding: 20px 3rem;
+    margin: auto;
+    width: 80%;
+    position: fixed;
+  }
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__close {
+    cursor: pointer;
+  }
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  &--hidden {
+    display: none;
+  }
 }
 
 //Responsive//
@@ -117,5 +119,10 @@ img {
   .container img {
     float: left;
     width: 100%;
+  }
+  .modal__box {
+    bottom: 12rem;
+    left: 10%;
+    top: 50%;
   }
 }
