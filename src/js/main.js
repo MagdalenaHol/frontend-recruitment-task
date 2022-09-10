@@ -1,3 +1,7 @@
+const button = document.getElementById('click-counter')
+const counter = document.querySelector('.counter');
+count = 0;
+
 
 const activeModal = () => {
   document.querySelector(".modal")
@@ -6,7 +10,7 @@ const activeModal = () => {
     .classList.toggle("overlay--hidden");
 };
 
-document.querySelector("#btn-pop-up")
+document.querySelector(".btn")
     .addEventListener("click", activeModal);
 
 document.querySelector(".overlay")
@@ -17,3 +21,11 @@ document.querySelector(".modal__close")
 
 document.querySelector(".overlay")
     .addEventListener("click", activeModal);
+
+
+button.addEventListener('click', function() {
+    count += 1;
+    counter.innerHTML = count;
+});
+
+    
