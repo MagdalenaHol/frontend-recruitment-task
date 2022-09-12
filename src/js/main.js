@@ -1,6 +1,6 @@
 const button = document.getElementById('click-counter')
-const counter = document.querySelector('.counter');
-count = 0;
+const counter = document.querySelector('#counter');
+let count = 0;
 
 
 const activeModal = () => {
@@ -23,9 +23,10 @@ document.querySelector(".overlay")
     .addEventListener("click", activeModal);
 
 
-button.addEventListener('click', function() {
-    count += 1;
-    counter.innerHTML = count;
-});
 
-    
+button.addEventListener('click', function() {
+    let count = localStorage.getItem("counter");
+    count ++;
+    localStorage.setItem("counter", count); 
+    document.getElementById("counter").innerHTML = count;
+});
