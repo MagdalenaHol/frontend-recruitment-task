@@ -97,6 +97,7 @@ img {
   }
 }
 
+
 //Responsive//
 @media screen and (min-width: 905px) {
   .container img {
@@ -123,6 +124,9 @@ img {
   .modal__box {
     bottom: 12rem;
     left: 10%;
-    top: 50%;
+    top: 30%;
+    &__btn-reset {
+      left: 30px;
+    }
   }
 }
