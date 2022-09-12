@@ -38,6 +38,9 @@ button.addEventListener('click', function() {
     document.getElementById("counter").innerHTML = count;
 
     if (count > 5) {
+        resetButton.style.display = 'block'
         resetButton.addEventListener('click', reset);
-    } 
+    } else {
+        resetButton.style.display = 'none'
+    };
 });
